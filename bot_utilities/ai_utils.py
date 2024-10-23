@@ -24,7 +24,7 @@ client = AsyncOpenAI(
 
 async def generate_response(instructions, history):
     messages = [
-            {"role": "system", "name": "instructions", "content": instructions},
+            {"role": "system", "content": instructions},
             *history,
         ]
 

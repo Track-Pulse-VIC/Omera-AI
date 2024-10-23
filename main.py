@@ -27,7 +27,7 @@ class AIBot(commands.AutoShardedBot):
             discord.client._log.info(f"Loaded Event Handler {cog_name}")
             await self.load_extension(f"{cog}")
         print('If syncing commands is taking longer than usual you are being ratelimited')
-        await self.tree.sync()
+        # await self.tree.sync()
         discord.client._log.info(f"Loaded {len(self.commands)} commands")
 
 bot = AIBot(command_prefix=[], intents=discord.Intents.all(), help_command=None)
